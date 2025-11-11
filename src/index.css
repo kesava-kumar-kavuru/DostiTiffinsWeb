@@ -14,11 +14,74 @@
   --box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   --brand-font: 'Poppins', Arial, sans-serif;
   --body-font: 'Inter', Arial, sans-serif;
+  /* navbar height used to offset fixed navbar */
+  --navbar-height: 92px;
 }
 body {
   font-family: var(--body-font);
   background: var(--bg-light);
   color: var(--text-dark);
   margin: 0;
+}
+
+/* Prevent horizontal scrolling caused by wide elements */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Include box-sizing globally so padding doesn't cause unexpected overflow */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Give sections a small horizontal gutter so buttons and cards don't touch edges on small screens */
+section {
+  padding-inline: 12px;
+}
+
+@media (min-width: 768px) {
+  section { padding-inline: 24px; }
+}
+
+/* Ensure images and media do not overflow */
+img, picture, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Add top padding so page content isn't hidden under fixed navbar. Adjust for responsive heights. */
+body {
+  padding-top: var(--navbar-height);
+}
+
+@media (max-width: 1024px) {
+  :root { --navbar-height: 86px; }
+}
+@media (max-width: 768px) {
+  :root { --navbar-height: 78px; }
+}
+@media (max-width: 480px) {
+  /* On very small screens navbar may wrap and become taller */
+  :root { --navbar-height: 110px; }
+}
+
+/* Hide vertical scrollbar visually while preserving scroll behavior */
+/* Firefox */
+body { scrollbar-width: none; }
+/* IE 10+ */
+body { -ms-overflow-style: none; }
+/* Webkit */
+body::-webkit-scrollbar { display: none; }
+
+/* When mobile menu is open, increase the top padding so the dropdown doesn't cover content.
+   We assume a reasonable menu height (220px) as a safe default; it's conservative for most devices.
+   The class is toggled by Navbar component. */
+body.nav-menu-open {
+  padding-top: calc(var(--navbar-height) + 220px);
+}
+
+@media (max-width: 480px) {
+  body.nav-menu-open { padding-top: calc(var(--navbar-height) + 260px); }
 }
 

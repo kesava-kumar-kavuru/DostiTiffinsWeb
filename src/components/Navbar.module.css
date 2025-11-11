@@ -1,13 +1,18 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 48px;
+  justify-content: center; /* container handles inner spacing */
+  padding: 8px 0; /* vertical padding only, horizontal handled by .container */
   background: var(--bg-white);
   box-shadow: var(--box-shadow);
-  position: sticky;
+  /* Make navbar fixed to top */
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
 }
 .brand {
   display: flex;
@@ -63,6 +68,100 @@
 }
 .callNow:hover { background: var(--accent); }
 
+/* constrain inner content to prevent overflow */
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 16px; /* provide horizontal gutter */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ensure call button doesn't overflow */
+.callNow {
+  white-space: nowrap;
+  flex-shrink: 0;
+  max-width: 180px; /* keep it tighter to avoid overflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Mobile toggle button (hidden on desktop) */
+.menuToggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+}
+.menuToggle { flex-shrink: 0; }
+.hamburger {
+  width: 22px;
+  height: 2px;
+  background: var(--text-dark);
+  display: block;
+  position: relative;
+}
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: var(--text-dark);
+}
+.hamburger::before { top: -7px; }
+.hamburger::after { top: 7px; }
+
+/* Mobile menu dropdown */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  box-shadow: var(--box-shadow);
+  padding: 14px 16px 18px 16px;
+  z-index: 999;
+}
+.mobileMenu ul { list-style: none; margin: 0; padding: 0; }
+.mobileMenu li { margin-bottom: 8px; }
+.mobileLink {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 8px;
+  font-size: 1.02rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+.callNowMobile {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* When nav has open class, show mobile menu */
+.open .mobileMenu { display: block; }
+
+
 /* Responsive navbar */
 @media (max-width: 1024px) {
   .navbar { padding: 16px 28px; }
@@ -76,14 +175,23 @@
   .links { gap: 12px; }
   .title { font-size: 1.25rem; }
   .subtitle { display: none; }
-  .callNow { padding: 8px 18px; font-size: 0.98rem; }
+  .callNow { padding: 8px 14px; font-size: 0.98rem; }
 }
 
 @media (max-width: 480px) {
   /* stack into a compact vertical layout on small screens */
-  .navbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .navbar { flex-direction: row; align-items: center; gap: 10px; }
   .brand { gap: 10px; }
-  .links { display: flex; width: 100%; justify-content: space-between; gap: 8px; padding: 0; }
+  /* hide desktop links on small screens */
+  .links { display: none; }
+  .menuToggle { display: block; }
   .linkBtn { font-size: 0.98rem; padding: 6px 8px; }
-  .callNow { align-self: stretch; text-align: center; padding: 10px 0; }
+  .callNow { display: none; }
+}
+
+/* Show hamburger earlier on medium screens to avoid overflow */
+@media (max-width: 768px) {
+  .menuToggle { display: block; }
+  .links { display: none; }
+  .callNow { display: none; }
 }

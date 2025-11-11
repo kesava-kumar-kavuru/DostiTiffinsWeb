@@ -87,6 +87,17 @@
 .emailBtn:hover {
   background: var(--accent);
 }
+
+/* Ensure buttons have clear shape and alignment on mobile */
+@media (max-width: 480px) {
+  .whatsappBtn, .emailBtn {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    text-align: center;
+  }
+}
 .socialRow {
   margin-top: 6px;
 }
