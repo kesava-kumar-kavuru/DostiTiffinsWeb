@@ -1,0 +1,14 @@
+.footer {
+  background: var(--primary-gradient);
+  padding: 16px 0 16px 0;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  font-family: var(--brand-font);
+}
+.content {
+  font-size: 1.07rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  opacity: 0.95;
+}

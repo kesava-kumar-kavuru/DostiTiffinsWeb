@@ -1,0 +1,24 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #FFA928 0%, #F9E576 100%);
+  --primary-orange: #FFA928;
+  --primary-yellow: #F9E576;
+  --accent: #F5A700;
+  --button-bg: #FFA928;
+  --button-text: #fff;
+  --bg-light: #FFF8E4;
+  --bg-white: #fff;
+  --text-dark: #443223;
+  --text-light: #fff;
+  --card-bg: #FFFBEA;
+  --border-radius: 18px;
+  --box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  --brand-font: 'Poppins', Arial, sans-serif;
+  --body-font: 'Inter', Arial, sans-serif;
+}
+body {
+  font-family: var(--body-font);
+  background: var(--bg-light);
+  color: var(--text-dark);
+  margin: 0;
+}
+

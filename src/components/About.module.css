@@ -1,0 +1,93 @@
+.about {
+  background: var(--bg-white);
+  padding: 70px 0 60px 0;
+  text-align: left;
+}
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: var(--brand-font);
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.underline {
+  width: 70px;
+  height: 5px;
+  background: var(--primary-yellow);
+  border-radius: 5px;
+  margin: 0 auto 38px auto;
+}
+.contentRow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 45px;
+  max-width: 1050px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.description {
+  flex: 1.2;
+  font-size: 1.19rem;
+  line-height: 1.62;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+.badges {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.badge {
+  display: inline-block;
+  padding: 8px 17px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.badgeLove {
+  background: #ffe7d6;
+  color: #c96a3b;
+}
+.badgeGhee {
+  background: #fff8e1;
+  color: #ed9d06;
+}
+.badgeFresh {
+  background: #fff1e6;
+  color: #e07500;
+}
+.featureGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 30px;
+  justify-items: center;
+}
+.featureCard {
+  background: #fffbea;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 26px 34px;
+  width: 90%;
+  min-width: 150px;
+  max-width: 210px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featureTitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary-orange);
+  margin-bottom: 5px;
+}
+.featureSubtitle {
+  font-size: 1.14rem;
+  color: var(--text-dark);
+}

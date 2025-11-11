@@ -1,0 +1,55 @@
+.menuSection {
+  background: var(--bg-white);
+  padding: 65px 0 60px 0;
+  text-align: center;
+}
+.header {
+  margin-bottom: 18px;
+}
+.specialBadge {
+  background: var(--primary-yellow);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.07rem;
+  padding: 8px 20px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.menuTitle {
+  font-size: 2.45rem;
+  color: var(--text-dark);
+  font-family: var(--brand-font);
+  margin-top: 8px;
+  font-weight: bold;
+}
+.underline {
+  width: 60px;
+  height: 5px;
+  background: var(--primary-yellow);
+  border-radius: 5px;
+  margin: 0 auto 28px auto;
+}
+.session {
+  margin-bottom: 34px;
+}
+.sessionTitle {
+  color: var(--primary-orange);
+  font-size: 1.43rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.time {
+  display: block;
+  color: #ae8743;
+  font-size: 1rem;
+  margin-bottom: 22px;
+  font-style: italic;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  justify-items: center;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,106 @@
+.contactSection {
+  background: var(--bg-white);
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+.heading {
+  font-size: 2.2rem;
+  color: var(--text-dark);
+  font-family: var(--brand-font);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.underline {
+  width: 60px;
+  height: 5px;
+  background: var(--primary-yellow);
+  border-radius: 5px;
+  margin: 0 auto 38px auto;
+}
+.infoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 30px;
+}
+.infoCard {
+  background: #fffbea;
+  border-radius: var(--border-radius);
+  min-width: 200px;
+  min-height: 110px;
+  box-shadow: var(--box-shadow);
+  padding: 18px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: var(--primary-orange);
+}
+.title {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 1.07rem;
+  margin-bottom: 7px;
+}
+.text {
+  color: #ae8743;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px 0 14px 0;
+  flex-wrap: wrap;
+}
+.whatsappBtn {
+  background: #25d366;
+  color: #fff;
+  border-radius: 10px;
+  padding: 13px 32px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: background 0.18s;
+}
+.whatsappBtn:hover {
+  background: #1ac157;
+}
+.emailBtn {
+  background: var(--button-bg);
+  color: #fff;
+  border-radius: 10px;
+  padding: 13px 32px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: background 0.18s;
+}
+.emailBtn:hover {
+  background: var(--accent);
+}
+.socialRow {
+  margin-top: 6px;
+}
+.instaLink {
+  color: #d46f5e;
+  font-size: 1.08rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.instaLink:hover {
+  text-decoration: underline;
+}
+.instructions {
+  font-size: 0.98rem;
+  color: #8b8276;
+  margin-top: 8px;
+}
