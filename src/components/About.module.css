@@ -91,3 +91,22 @@
   font-size: 1.14rem;
   color: var(--text-dark);
 }
+
+/* Responsive about section */
+@media (max-width: 1024px) {
+  .contentRow { gap: 28px; max-width: 920px; }
+}
+
+@media (max-width: 768px) {
+  .about { padding: 40px 12px 36px; }
+  .contentRow { flex-direction: column; align-items: center; gap: 18px; }
+  .description { flex: unset; width: 92%; font-size: 1.02rem; }
+  .featureGrid { grid-template-columns: 1fr; gap: 16px; }
+  .featureCard { width: 92%; max-width: 480px; padding: 18px 22px; }
+}
+
+@media (max-width: 480px) {
+  .heading { font-size: 1.9rem; }
+  .description { font-size: 1rem; }
+  .featureTitle { font-size: 1.25rem; }
+}

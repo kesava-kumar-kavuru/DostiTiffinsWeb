@@ -104,3 +104,17 @@
   color: #8b8276;
   margin-top: 8px;
 }
+
+/* Responsive contact */
+@media (max-width: 768px) {
+  .contactSection { padding: 36px 12px 30px; }
+  .heading { font-size: 1.6rem; }
+  .infoGrid { gap: 18px; }
+  .infoCard { min-width: unset; width: 92%; padding: 14px 18px; }
+  .buttonRow { flex-direction: column; gap: 10px; }
+}
+
+@media (max-width: 480px) {
+  .infoCard { width: 100%; padding: 12px 14px; }
+  .whatsappBtn, .emailBtn { padding: 12px 18px; width: 100%; }
+}
