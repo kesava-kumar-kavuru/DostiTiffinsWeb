@@ -45,6 +45,7 @@ Open your browser at the URL shown (usually http://localhost:5173).
 
 ## 📁 Project Structure
 
+<pre>
 dosti-tiffins/
 │
 ├── public/
@@ -79,7 +80,7 @@ dosti-tiffins/
 ├── vite.config.js
 ├── README.md
 └── .gitignore
-
+</pre>
 
 ---
 
