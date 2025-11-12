@@ -29,7 +29,7 @@ function Contact() {
         <a href="mailto:dosti.tiffins@gmail.com" className={styles.emailBtn}>Email Us</a>
       </div>
       <div className={styles.socialRow}>
-        <a href="https://instagram.com/p/DQqY1JoEkJH/?igsh=ajZ3c3l1bGh2eGMy" target="_blank" rel="noopener noreferrer" className={styles.instaLink}>
+        <a href="https://www.instagram.com/dosti.tiffins?igsh=MTc2NGRrOGtyaTI2dw==" target="_blank" rel="noopener noreferrer" className={styles.instaLink}>
           <span role="img" aria-label="Instagram">📷</span> Follow us on Instagram
         </a>
       </div>
